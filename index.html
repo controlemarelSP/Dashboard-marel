@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
+            background: #000000;
             min-height: 100vh;
             padding: 20px;
         }
@@ -33,7 +33,7 @@
         }
 
         .spinner {
-            border: 4px solid #f3f3f3;
+            border: 4px solid #333;
             border-top: 4px solid #8B4513;
             border-radius: 50%;
             width: 50px;
@@ -47,9 +47,9 @@
         }
 
         .error-message {
-            background: #FEE2E2;
+            background: #2d1a1a;
             border: 2px solid #EF4444;
-            color: #DC2626;
+            color: #ff6b6b;
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
@@ -67,17 +67,16 @@
             margin: 8px 0;
         }
 
-        /* Header com identidade Marel - FUNDO ESCURO */
+        /* Header Marrom com Logo Marel */
         .header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #D2691E 100%);
             color: white;
             padding: 30px 40px;
             border-radius: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.5);
             position: relative;
             overflow: hidden;
-            border: 1px solid #3d3d3d;
         }
 
         .header::before {
@@ -87,7 +86,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></svg>');
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>');
             opacity: 0.5;
         }
 
@@ -103,22 +102,19 @@
             margin-bottom: 20px;
         }
 
-        /* Logo Container com fundo preto */
+        /* Logo da Marel */
         .logo-container {
-            background: #000000;
-            padding: 15px 25px;
-            border-radius: 12px;
+            background: #1a1a1a;
+            padding: 12px 24px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            border: 2px solid #333;
         }
 
-        /* Logo SVG da Marel */
-        .logo-svg {
-            width: 50px;
-            height: 50px;
+        .logo-marel {
+            height: 40px;
+            width: auto;
         }
 
         .brand-text {
@@ -126,34 +122,22 @@
             flex-direction: column;
         }
 
-        .brand-name {
-            font-size: 2em;
-            font-weight: bold;
-            color: #8B4513;
-            letter-spacing: 3px;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-
-        .brand-tagline {
-            font-size: 0.75em;
-            color: #999;
+        .brand-subtitle {
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.8);
             font-weight: normal;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .header h1 {
             font-size: 2em;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #fff;
         }
 
         .header p {
             font-size: 1em;
-            opacity: 0.85;
-            color: #ccc;
+            opacity: 0.95;
         }
 
         .status-badges {
@@ -167,11 +151,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(16, 185, 129, 0.2);
+            background: rgba(16, 185, 129, 0.9);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.85em;
-            border: 2px solid rgba(16, 185, 129, 0.5);
+            border: 2px solid rgba(255,255,255,0.3);
             animation: pulse 2s infinite;
         }
 
@@ -184,14 +168,14 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.2);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.85em;
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
         }
 
-        /* Cards de Resumo com cores Marel */
+        /* Cards de Resumo - Fundo escuro */
         .summary-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -200,42 +184,39 @@
         }
 
         .summary-card {
-            background: white;
+            background: #1a1a1a;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-top: 4px solid;
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #2d2d2d;
         }
 
         .summary-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
 
         .summary-card.total { 
-            border-color: #8B4513;
-            background: linear-gradient(135deg, #fff 0%, #FFF8F0 100%);
+            border-top-color: #8B4513;
         }
         .summary-card.no-prazo { 
-            border-color: #10B981;
-            background: linear-gradient(135deg, #fff 0%, #F0FDF4 100%);
+            border-top-color: #10B981;
         }
         .summary-card.fora-prazo { 
-            border-color: #EF4444;
-            background: linear-gradient(135deg, #fff 0%, #FEF2F2 100%);
+            border-top-color: #EF4444;
         }
         .summary-card.taxa { 
-            border-color: #D2691E;
-            background: linear-gradient(135deg, #fff 0%, #FFF5EB 100%);
+            border-top-color: #D2691E;
         }
 
         .summary-info h3 {
             font-size: 0.9em;
-            color: #6B7280;
+            color: #999;
             margin-bottom: 8px;
             font-weight: 600;
             text-transform: uppercase;
@@ -247,17 +228,17 @@
             font-weight: bold;
         }
 
-        .summary-card.total .number { color: #8B4513; }
+        .summary-card.total .number { color: #D2691E; }
         .summary-card.no-prazo .number { color: #10B981; }
         .summary-card.fora-prazo .number { color: #EF4444; }
-        .summary-card.taxa .number { color: #D2691E; }
+        .summary-card.taxa .number { color: #F59E0B; }
 
         .summary-icon {
             font-size: 3em;
-            opacity: 0.5;
+            opacity: 0.3;
         }
 
-        /* Grid de Etapas */
+        /* Grid de Etapas - Fundo escuro */
         .etapas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -266,17 +247,19 @@
         }
 
         .etapa-card {
-            background: white;
+            background: #1a1a1a;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             border-left: 5px solid;
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #2d2d2d;
+            border-left-width: 5px;
         }
 
         .etapa-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
 
         .etapa-header {
@@ -300,7 +283,7 @@
         .etapa-nome {
             font-size: 0.95em;
             font-weight: 600;
-            color: #1F2937;
+            color: #e0e0e0;
             line-height: 1.3;
         }
 
@@ -312,7 +295,7 @@
         .progress-bar {
             width: 100%;
             height: 12px;
-            background: #E5E7EB;
+            background: #2d2d2d;
             border-radius: 10px;
             overflow: hidden;
             margin-bottom: 20px;
@@ -334,15 +317,14 @@
             padding: 15px;
             border-radius: 10px;
             border: 2px solid;
+            background: #0d0d0d;
         }
 
         .stat-box.no-prazo {
-            background: #ECFDF5;
             border-color: #10B981;
         }
 
         .stat-box.fora-prazo {
-            background: #FEF2F2;
             border-color: #EF4444;
         }
 
@@ -363,15 +345,15 @@
             font-weight: 600;
         }
 
-        .stat-box.no-prazo .stat-label { color: #047857; }
-        .stat-box.fora-prazo .stat-label { color: #DC2626; }
+        .stat-box.no-prazo .stat-label { color: #10B981; }
+        .stat-box.fora-prazo .stat-label { color: #EF4444; }
 
         .stat-number {
             font-size: 2em;
             font-weight: bold;
         }
 
-        .stat-box.no-prazo .stat-number { color: #059669; }
+        .stat-box.no-prazo .stat-number { color: #10B981; }
         .stat-box.fora-prazo .stat-number { color: #EF4444; }
 
         .stat-percent {
@@ -379,21 +361,23 @@
             margin-top: 5px;
         }
 
-        .stat-box.no-prazo .stat-percent { color: #047857; }
+        .stat-box.no-prazo .stat-percent { color: #059669; }
         .stat-box.fora-prazo .stat-percent { color: #DC2626; }
 
-        /* Info Box */
+        /* Info Box - Fundo escuro */
         .info-box {
-            background: white;
+            background: #1a1a1a;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             border-left: 4px solid #8B4513;
+            border: 1px solid #2d2d2d;
+            border-left-width: 4px;
         }
 
         .info-box h3 {
             font-size: 1.2em;
-            color: #1F2937;
+            color: #e0e0e0;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
@@ -401,28 +385,29 @@
         }
 
         .info-content {
-            color: #6B7280;
+            color: #999;
             line-height: 1.8;
         }
 
         .info-content strong {
-            color: #8B4513;
+            color: #D2691E;
         }
 
-        /* Footer */
+        /* Footer - Fundo escuro */
         .footer {
             text-align: center;
             padding: 30px;
-            color: #6B7280;
+            color: #999;
             margin-top: 40px;
-            background: white;
+            background: #1a1a1a;
             border-radius: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            border: 1px solid #2d2d2d;
         }
 
         .footer-brand {
             font-weight: 600;
-            color: #8B4513;
+            color: #D2691E;
             font-size: 1.1em;
             margin-bottom: 10px;
         }
@@ -433,13 +418,8 @@
                 font-size: 1.5em;
             }
 
-            .brand-name {
-                font-size: 1.5em;
-            }
-
-            .logo-svg {
-                width: 40px;
-                height: 40px;
+            .logo-marel {
+                height: 32px;
             }
 
             .status-badges {
@@ -458,32 +438,22 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header Marel com Fundo Preto -->
+        <!-- Header Marrom com Logo Marel -->
         <div class="header">
             <div class="header-content">
                 <div class="brand-area">
                     <div class="logo-container">
-                        <!-- Logo SVG da Marel (baseado nos PDFs) -->
-                        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Casa estilizada -->
-                            <path d="M50 15 L20 40 L20 80 L80 80 L80 40 Z" fill="#8B4513"/>
-                            <path d="M50 15 L80 40 L80 35 L50 10 L20 35 L20 40 Z" fill="#A0522D"/>
-                            <!-- Porta -->
-                            <rect x="42" y="55" width="16" height="25" fill="#654321"/>
-                            <!-- Janela esquerda -->
-                            <rect x="28" y="48" width="10" height="10" fill="#87CEEB"/>
-                            <!-- Janela direita -->
-                            <rect x="62" y="48" width="10" height="10" fill="#87CEEB"/>
-                            <!-- Detalhes janelas -->
-                            <line x1="33" y1="48" x2="33" y2="58" stroke="#654321" stroke-width="1"/>
-                            <line x1="28" y1="53" x2="38" y2="53" stroke="#654321" stroke-width="1"/>
-                            <line x1="67" y1="48" x2="67" y2="58" stroke="#654321" stroke-width="1"/>
-                            <line x1="62" y1="53" x2="72" y2="53" stroke="#654321" stroke-width="1"/>
+                        <!-- Logo SVG da Marel (texto branco em fundo escuro) -->
+                        <svg class="logo-marel" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Fundo escuro -->
+                            <rect width="200" height="50" fill="#1a1a1a"/>
+                            
+                            <!-- Texto MAREL em branco -->
+                            <text x="10" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="300" fill="#ffffff" letter-spacing="6">MAREL</text>
                         </svg>
                         
                         <div class="brand-text">
-                            <div class="brand-name">MAREL SP</div>
-                            <div class="brand-tagline">Móveis Planejados</div>
+                            <div class="brand-subtitle">Móveis Planejados</div>
                         </div>
                     </div>
                 </div>
@@ -507,7 +477,7 @@
         <!-- Loading -->
         <div id="loading" class="loading">
             <div class="spinner"></div>
-            <p style="color: #6B7280;">Carregando dados da planilha...</p>
+            <p style="color: #999;">Carregando dados da planilha...</p>
         </div>
 
         <!-- Error -->
@@ -519,7 +489,6 @@
                 <li>A planilha está pública? (Compartilhar → "Qualquer pessoa com o link")</li>
                 <li>A planilha foi publicada na web? (Arquivo → Compartilhar → Publicar na web)</li>
                 <li>O ID da planilha está correto no código?</li>
-                <li>O nome da aba está correto? (veja na parte inferior do Google Sheets)</li>
             </ol>
         </div>
 
@@ -589,7 +558,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
-        // CONFIGURAÇÃO
         const SPREADSHEET_ID = '1TMNC7E-fFD0Kb93O8Xfr0vsnwr7EPkdcnFdIqAjasx4';
         
         const etapaConfig = {
@@ -607,17 +575,13 @@
         async function carregarDadosPlanilha() {
             try {
                 const url = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/export?format=csv`;
-                
-                console.log('Carregando dados da Marel SP...');
-                
                 const response = await fetch(url);
                 
                 if (!response.ok) {
-                    throw new Error('A planilha não está acessível. Certifique-se de que ela foi PUBLICADA NA WEB (Arquivo → Compartilhar → Publicar na web).');
+                    throw new Error('A planilha não está acessível.');
                 }
                 
                 const csvText = await response.text();
-                console.log('Dados carregados com sucesso!');
                 
                 return new Promise((resolve, reject) => {
                     Papa.parse(csvText, {
@@ -628,7 +592,6 @@
                                 const nomeEtapa = row['Etapa'] || row['etapa'];
                                 const noPrazo = parseInt(row['No Prazo'] || row['no prazo'] || 0);
                                 const foraDorazo = parseInt(row['Fora do Prazo'] || row['fora do prazo'] || 0);
-                                
                                 const config = etapaConfig[nomeEtapa] || { icon: '📊', cor: '#8B4513' };
                                 
                                 return {
@@ -641,20 +604,18 @@
                             }).filter(e => e.nome);
                             
                             if (etapas.length === 0) {
-                                reject(new Error('Nenhum dado encontrado na planilha.'));
+                                reject(new Error('Nenhum dado encontrado.'));
                             } else {
-                                console.log(`${etapas.length} etapas carregadas - Marel SP`);
                                 resolve(etapas);
                             }
                         },
                         error: (error) => {
-                            reject(new Error(`Erro ao processar dados: ${error.message}`));
+                            reject(new Error(`Erro: ${error.message}`));
                         }
                     });
                 });
                 
             } catch (error) {
-                console.error('Erro:', error);
                 throw error;
             }
         }
@@ -731,7 +692,6 @@
                 document.getElementById('content').style.display = 'block';
 
             } catch (error) {
-                console.error('Erro Marel SP:', error);
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('error').style.display = 'block';
                 document.getElementById('error-text').textContent = error.message;
@@ -739,7 +699,6 @@
         }
 
         window.addEventListener('load', () => {
-            console.log('Dashboard Marel SP inicializado');
             atualizarDashboard();
             setInterval(atualizarDashboard, 30000);
         });
