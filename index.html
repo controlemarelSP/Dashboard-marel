@@ -67,16 +67,17 @@
             margin: 8px 0;
         }
 
-        /* Header com identidade Marel */
+        /* Header com identidade Marel - FUNDO ESCURO */
         .header {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #D2691E 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
             color: white;
             padding: 30px 40px;
             border-radius: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             position: relative;
             overflow: hidden;
+            border: 1px solid #3d3d3d;
         }
 
         .header::before {
@@ -86,7 +87,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>');
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></svg>');
             opacity: 0.5;
         }
 
@@ -99,45 +100,60 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
+        /* Logo Container com fundo preto */
         .logo-container {
-            background: white;
-            padding: 10px 20px;
-            border-radius: 10px;
+            background: #000000;
+            padding: 15px 25px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #333;
         }
 
-        .logo-icon {
-            font-size: 2.5em;
+        /* Logo SVG da Marel */
+        .logo-svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
         }
 
         .brand-name {
             font-size: 2em;
             font-weight: bold;
             color: #8B4513;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            line-height: 1;
+            margin-bottom: 4px;
         }
 
         .brand-tagline {
-            font-size: 0.85em;
-            color: #666;
+            font-size: 0.75em;
+            color: #999;
             font-weight: normal;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
         .header h1 {
             font-size: 2em;
             margin-bottom: 8px;
             font-weight: 600;
+            color: #fff;
         }
 
         .header p {
             font-size: 1em;
-            opacity: 0.95;
+            opacity: 0.85;
+            color: #ccc;
         }
 
         .status-badges {
@@ -151,11 +167,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(16, 185, 129, 0.9);
+            background: rgba(16, 185, 129, 0.2);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.85em;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(16, 185, 129, 0.5);
             animation: pulse 2s infinite;
         }
 
@@ -168,11 +184,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.85em;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255,255,255,0.2);
         }
 
         /* Cards de Resumo com cores Marel */
@@ -421,6 +437,11 @@
                 font-size: 1.5em;
             }
 
+            .logo-svg {
+                width: 40px;
+                height: 40px;
+            }
+
             .status-badges {
                 flex-direction: column;
             }
@@ -437,13 +458,30 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header Marel -->
+        <!-- Header Marel com Fundo Preto -->
         <div class="header">
             <div class="header-content">
                 <div class="brand-area">
                     <div class="logo-container">
-                        <span class="logo-icon">🏠</span>
-                        <div>
+                        <!-- Logo SVG da Marel (baseado nos PDFs) -->
+                        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Casa estilizada -->
+                            <path d="M50 15 L20 40 L20 80 L80 80 L80 40 Z" fill="#8B4513"/>
+                            <path d="M50 15 L80 40 L80 35 L50 10 L20 35 L20 40 Z" fill="#A0522D"/>
+                            <!-- Porta -->
+                            <rect x="42" y="55" width="16" height="25" fill="#654321"/>
+                            <!-- Janela esquerda -->
+                            <rect x="28" y="48" width="10" height="10" fill="#87CEEB"/>
+                            <!-- Janela direita -->
+                            <rect x="62" y="48" width="10" height="10" fill="#87CEEB"/>
+                            <!-- Detalhes janelas -->
+                            <line x1="33" y1="48" x2="33" y2="58" stroke="#654321" stroke-width="1"/>
+                            <line x1="28" y1="53" x2="38" y2="53" stroke="#654321" stroke-width="1"/>
+                            <line x1="67" y1="48" x2="67" y2="58" stroke="#654321" stroke-width="1"/>
+                            <line x1="62" y1="53" x2="72" y2="53" stroke="#654321" stroke-width="1"/>
+                        </svg>
+                        
+                        <div class="brand-text">
                             <div class="brand-name">MAREL SP</div>
                             <div class="brand-tagline">Móveis Planejados</div>
                         </div>
